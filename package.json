@@ -1,0 +1,43 @@
+{
+  "name": "spoiler-free-tapology",
+  "title": "Spoiler-free Tapology",
+  "version": "1.0.0",
+  "description": "Hide results on Tapology fighter/event/search pages. On event pages, the left/right position of the fighters will be randomized on each load.",
+  "author": "Andreas Wahlqvist",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "concurrently --kill-others --names \"stylus,rollup\" \"stylus -w ./src/style.styl -o ./src/style.compiled.css\" \"rollup -wc rollup.conf.js\"",
+    "clean": "del-cli dist types",
+    "build:js": "rollup -c rollup.conf.js",
+    "prebuild": "run-s ci clean",
+    "build": "cross-env NODE_ENV=production run-s build:js",
+    "ci": "run-s lint",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "@violentmonkey/dom": "^2.0.2",
+    "@violentmonkey/ui": "^0.7.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.16.0",
+    "@gera2ld/plaid": "~2.4.0",
+    "@gera2ld/plaid-common-ts": "~2.4.0",
+    "@gera2ld/plaid-rollup": "~2.4.0",
+    "@types/react-dom": "^17.0.11",
+    "@types/tampermonkey": "^4.0.5",
+    "concurrently": "^6.4.0",
+    "del-cli": "^4.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.4.1",
+    "rollup-plugin-userscript": "^0.1.1",
+    "stylus": "^0.55.0"
+  }
+}

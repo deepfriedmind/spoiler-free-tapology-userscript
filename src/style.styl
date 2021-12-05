@@ -1,0 +1,214 @@
+warning-triangle()
+  margin-right 0.3em
+  color initial
+  content '⚠️'
+  vertical-align top
+  font-size 1.2em
+  cursor pointer
+
+// -----------------------------------------------------------------------------
+// Fighter page
+// -----------------------------------------------------------------------------
+
+// -------------------- Top record display + stats table -----------------------
+#content h1.prorecord
+#stats > ul > li:nth-child(2) > span
+#stats > ul > li:nth-child(4) > span
+  &:not(:active)
+    color transparent
+
+  &::before
+    warning-triangle()
+
+// ---------------------------- Fight filter box -------------------------------
+.result-types
+  label[for='showWins']
+  label[for='showLosses']
+  label[for='showDraws']
+  label[for='showNoContests']
+    overflow hidden
+    white-space nowrap
+
+  label[for='showWins']
+    width 4ch
+
+  label[for='showLosses']
+    width 6ch
+
+  label[for='showDraws']
+    width 5ch
+
+  label[for='showNoContests']
+    width 10ch
+
+// ------------------------------- Fight list ----------------------------------
+.fighterFightResults
+  .result:only-child:not([data-result='cancelled'])
+    border-color transparent !important
+
+    &::before
+    .lead
+    .record
+      display none !important
+
+    .notes
+      margin-top 0 !important
+
+// -----------------------------------------------------------------------------
+// Event page
+// -----------------------------------------------------------------------------
+section#sidebar .eventQuickCardSidebar > ul
+  transition filter 0.2s
+
+  &:not(:active)
+    filter blur(10px) saturate(0)
+    cursor help
+
+    a:link
+    a:hover
+    a:visited
+      border-bottom initial !important
+      color initial !important
+
+    *
+      pointer-events none
+
+ul.fightCard
+  visibility hidden
+
+  &.was-flipped
+    visibility visible
+
+  &.hide-results
+    .fightCardBout
+      display flex !important
+      flex-wrap wrap
+      cursor help
+
+      .fightCardResultHolder
+        order 1
+
+      .fightCardBoutNumber
+        order 2
+
+      .fightCardFighterImage:nth-child(3)
+        order 3
+
+        ../.flip ^[3..-1]
+          order 7
+
+      .fightCardFighterBout.left
+        order 4
+
+        ../.flip ^[3..-1]
+          order 6
+          text-align left
+
+      .fightCardMatchup
+        order 5
+
+      .fightCardFighterBout.right
+        order 6
+
+        ../.flip ^[3..-1]
+          order 4
+          text-align right
+
+      .fightCardFighterImage:nth-child(7)
+        order 7
+
+        ../.flip ^[3..-1]
+          order 3
+
+      .fightCardFighterName
+        display flex
+
+        > a
+        .resultIcon
+          margin 0 0.2em
+
+        &.left
+        ../.flip ^[3..-1].right
+          justify-content flex-end
+
+        ../.flip ^[3..-1].left
+          justify-content flex-start
+
+        ../.flip ^[3..-1].right
+          > a
+            order 1
+
+          .resultIcon
+            order 2
+
+        ../.flip ^[3..-1].left
+          > a
+            order 2
+
+          .resultIcon
+            order 1
+
+      &:not(:active)
+        .result
+        .time
+        .fightCardFighterRank
+          visibility hidden
+
+      &:not(:active)
+        .resultIcon
+          display none
+
+        .fightCardFighterBout
+          &.win
+          &.loss
+          &.nc
+            background-color transparent
+
+.eventAwardDescription:not(:active)
+  filter blur(10px)
+  cursor help
+
+// ------------------------- Results toggle element ----------------------------
+@css {
+  .results-toggle {
+    @apply flex items-center justify-end mt-5
+  }
+
+  .results-toggle_label {
+    @apply flex items-center cursor-pointer
+  }
+
+  .results-toggle_label-text {
+    @apply mr-3 text-base
+  }
+
+  .results-toggle_wrapper {
+    @apply relative
+  }
+
+  .results-toggle_input {
+    @apply sr-only
+  }
+
+  .results-toggle_track {
+    @apply w-10 h-4 bg-gray-200 rounded-full shadow-inner
+  }
+
+  .results-toggle_knob {
+    @apply absolute w-6 h-6 bg-red-500 rounded-full shadow -left-1 -top-1 transform transition
+  }
+
+  .results-toggle input:checked ~ .results-toggle_knob {
+    @apply bg-green-500 translate-x-5
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Search results page
+// -----------------------------------------------------------------------------
+.searchResultsFighter td:nth-child(5)
+  &:not(:active)
+    color transparent
+
+  &::before
+    warning-triangle()

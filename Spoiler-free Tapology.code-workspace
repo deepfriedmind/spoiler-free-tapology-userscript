@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "sash.hoverBorder": "#f13f0e",
+      "tab.activeBorder": "#f13f0e",
+      "titleBar.activeBackground": "#c1320b",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#c1320b99",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#c1320b",
+    "standard.engine": "ts-standard",
+    "tasksStatusbar.taskLabelFilter": "dev"
+  }
+}

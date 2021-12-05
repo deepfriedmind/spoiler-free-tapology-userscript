@@ -1,0 +1,193 @@
+#content h1.prorecord:not(:active),
+#stats > ul > li:nth-child(2) > span:not(:active),
+#stats > ul > li:nth-child(4) > span:not(:active) {
+  color: transparent;
+}
+#content h1.prorecord::before,
+#stats > ul > li:nth-child(2) > span::before,
+#stats > ul > li:nth-child(4) > span::before {
+  margin-right: 0.3em;
+  color: initial;
+  content: '⚠️';
+  vertical-align: top;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.result-types label[for='showWins'],
+.result-types label[for='showLosses'],
+.result-types label[for='showDraws'],
+.result-types label[for='showNoContests'] {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.result-types label[for='showWins'] {
+  width: 4ch;
+}
+.result-types label[for='showLosses'] {
+  width: 6ch;
+}
+.result-types label[for='showDraws'] {
+  width: 5ch;
+}
+.result-types label[for='showNoContests'] {
+  width: 10ch;
+}
+.fighterFightResults .result:only-child:not([data-result='cancelled']) {
+  border-color: transparent !important;
+}
+.fighterFightResults .result:only-child:not([data-result='cancelled'])::before,
+.fighterFightResults .result:only-child:not([data-result='cancelled']) .lead,
+.fighterFightResults .result:only-child:not([data-result='cancelled']) .record {
+  display: none !important;
+}
+.fighterFightResults .result:only-child:not([data-result='cancelled']) .notes {
+  margin-top: 0 !important;
+}
+section#sidebar .eventQuickCardSidebar > ul {
+  transition: filter 0.2s;
+}
+section#sidebar .eventQuickCardSidebar > ul:not(:active) {
+  filter: blur(10px) saturate(0);
+  cursor: help;
+}
+section#sidebar .eventQuickCardSidebar > ul:not(:active) a:link,
+section#sidebar .eventQuickCardSidebar > ul:not(:active) a:hover,
+section#sidebar .eventQuickCardSidebar > ul:not(:active) a:visited {
+  border-bottom: initial !important;
+  color: initial !important;
+}
+section#sidebar .eventQuickCardSidebar > ul:not(:active) * {
+  pointer-events: none;
+}
+ul.fightCard {
+  visibility: hidden;
+}
+ul.fightCard.was-flipped {
+  visibility: visible;
+}
+ul.fightCard.hide-results .fightCardBout {
+  display: flex !important;
+  flex-wrap: wrap;
+  cursor: help;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardResultHolder {
+  order: 1;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardBoutNumber {
+  order: 2;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterImage:nth-child(3) {
+  order: 3;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterImage:nth-child(3) {
+  order: 7;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterBout.left {
+  order: 4;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterBout.left {
+  order: 6;
+  text-align: left;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardMatchup {
+  order: 5;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterBout.right {
+  order: 6;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterBout.right {
+  order: 4;
+  text-align: right;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterImage:nth-child(7) {
+  order: 7;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterImage:nth-child(7) {
+  order: 3;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterName {
+  display: flex;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterName > a,
+ul.fightCard.hide-results .fightCardBout .fightCardFighterName .resultIcon {
+  margin: 0 0.2em;
+}
+ul.fightCard.hide-results .fightCardBout .fightCardFighterName.left,
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterName.right {
+  justify-content: flex-end;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterName.left {
+  justify-content: flex-start;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterName.right > a {
+  order: 1;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterName.right .resultIcon {
+  order: 2;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterName.left > a {
+  order: 2;
+}
+ul.fightCard.hide-results .fightCardBout.flip .fightCardFighterName.left .resultIcon {
+  order: 1;
+}
+ul.fightCard.hide-results .fightCardBout:not(:active) .result,
+ul.fightCard.hide-results .fightCardBout:not(:active) .time,
+ul.fightCard.hide-results .fightCardBout:not(:active) .fightCardFighterRank {
+  visibility: hidden;
+}
+ul.fightCard.hide-results .fightCardBout:not(:active) .resultIcon {
+  display: none;
+}
+ul.fightCard.hide-results .fightCardBout:not(:active) .fightCardFighterBout.win,
+ul.fightCard.hide-results .fightCardBout:not(:active) .fightCardFighterBout.loss,
+ul.fightCard.hide-results .fightCardBout:not(:active) .fightCardFighterBout.nc {
+  background-color: transparent;
+}
+.eventAwardDescription:not(:active) {
+  filter: blur(10px);
+  cursor: help;
+}
+
+.results-toggle {
+  @apply flex items-center justify-end mt-5
+}
+
+.results-toggle_label {
+  @apply flex items-center cursor-pointer
+}
+
+.results-toggle_label-text {
+  @apply mr-3 text-base
+}
+
+.results-toggle_wrapper {
+  @apply relative
+}
+
+.results-toggle_input {
+  @apply sr-only
+}
+
+.results-toggle_track {
+  @apply w-10 h-4 bg-gray-200 rounded-full shadow-inner
+}
+
+.results-toggle_knob {
+  @apply absolute w-6 h-6 bg-red-500 rounded-full shadow -left-1 -top-1 transform transition
+}
+
+.results-toggle input:checked ~ .results-toggle_knob {
+  @apply bg-green-500 translate-x-5
+}
+.searchResultsFighter td:nth-child(5):not(:active) {
+  color: transparent;
+}
+.searchResultsFighter td:nth-child(5)::before {
+  margin-right: 0.3em;
+  color: initial;
+  content: '⚠️';
+  vertical-align: top;
+  font-size: 1.2em;
+  cursor: pointer;
+}

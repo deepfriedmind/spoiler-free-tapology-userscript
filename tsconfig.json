@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "jsxFactory": "VM.hm",
+    "jsxFragmentFactory": "VM.Fragment",
+    "lib": ["DOM", "ES6", "DOM.Iterable", "ScriptHost", "ESNext"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "outDir": "types",
+    "strict": true,
+    "target": "es6"
+  },
+  "include": ["src/**/*"]
+}

@@ -4,6 +4,9 @@
 // @description Hide results on Tapology fighter/event/search pages. On event pages, the left/right position of the fighters will be randomized on each load.
 // @author      Andreas Wahlqvist
 // @version     1.0.0
+// @homepageURL https://github.com/deepfriedmind/spoiler-free-tapology-userscript/
+// @downloadURL https://github.com/deepfriedmind/spoiler-free-tapology-userscript/raw/main/dist/spoiler-free-tapology.user.js
+// @supportURL  https://github.com/deepfriedmind/spoiler-free-tapology-userscript/issues
 // @namespace   https://github.com/deepfriedmind
 // @match       https://www.tapology.com/fightcenter/events/*
 // @match       https://www.tapology.com/fightcenter/fighters/*

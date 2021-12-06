@@ -3,6 +3,9 @@
 // @description process.env.DESCRIPTION
 // @author      process.env.AUTHOR
 // @version     process.env.VERSION
+// @homepageURL https://github.com/deepfriedmind/spoiler-free-tapology-userscript/
+// @downloadURL https://github.com/deepfriedmind/spoiler-free-tapology-userscript/raw/main/dist/spoiler-free-tapology.user.js
+// @supportURL  https://github.com/deepfriedmind/spoiler-free-tapology-userscript/issues
 // @namespace   https://github.com/deepfriedmind
 // @match       https://www.tapology.com/fightcenter/events/*
 // @match       https://www.tapology.com/fightcenter/fighters/*

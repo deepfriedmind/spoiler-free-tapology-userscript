@@ -15,6 +15,7 @@
     },
     "peacock.color": "#c1320b",
     "standard.engine": "ts-standard",
-    "tasksStatusbar.taskLabelFilter": "dev"
+    "tasksStatusbar.taskLabelFilter": "dev",
+    "cSpell.words": ["Tapology"]
   }
 }
